@@ -1,0 +1,175 @@
+.skill-bars{
+  width: 100%;
+	min-height: 100vh;
+  background: rgb(27, 24, 24);
+  margin-top: auto;
+  place-items: center;
+  padding: 105px 30px;
+}
+.skill-bars .bar{
+  margin: 70px 0;
+}
+.skill-bars .bar:first-child{
+  margin-top: 0px;
+}
+.skill-bars .bar .info{
+  margin-bottom: 5px;
+  color: #fff;
+}
+.skill-bars .bar .info span{
+  font-size: 25px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line{
+  height: 10px;
+  width: 100%;
+  background: #ffffff;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards; 
+}
+
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span{
+  height: 100%;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #ffa600;
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+.bar .progress-line.html span{
+  width: 95%;
+}
+.bar .progress-line.css span{
+  width: 60%;
+}
+.bar .progress-line.javascript span{
+  width: 50%;
+}
+.bar .progress-line.react span{
+  width: 50%;
+}
+.bar .progress-line.photoshop span{
+  width: 85%;
+}
+.progress-line span::before{
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after{
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 1px 8px;
+  font-size: 15px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100%{
+    opacity: 1;
+  }
+}
+.progress-line.html span::after{
+  content: "95%";
+}
+.progress-line.css span::after{
+  content: "60%";
+}
+.progress-line.javascript span::after{
+  content: "50%";
+}
+.progress-line.react span::after{
+  content: "50%";
+}
+.progress-line.photoshop span::after{
+  content: "85%";
+}
+
+.fa-css3-alt{
+    color: #264de4;
+    transition: transform 1s ease-in-out;
+}
+
+.fa-css3-alt:hover{
+  transform: rotate(360deg);
+}
+
+.fa-html5{
+    color: #FF5733;
+    transition: transform 1s ease-in-out;
+}
+
+.fa-html5:hover{
+  transform: rotate(360deg);
+}
+
+.fa-js{
+    color: #f0db4f;
+    transition: transform 1s ease-in-out;
+}
+
+.fa-js:hover{
+  transform: rotate(360deg);
+}
+
+.fa-react{
+    color: #61dafb;
+    transition: transform 1s ease-in-out;
+}
+
+.fa-react:hover{
+  transform: rotate(360deg);
+}
+
+.fa-paint-brush{
+    color: #8bc3fc;
+    transition: transform 1s ease-in-out;
+}
+.fa-paint-brush:hover{
+  transform: rotate(360deg);
+}
+
+.button a {
+  background-color: #3d3d3d;
+	padding:12px 40px;
+	text-decoration: none;
+	color:#fff;
+	font-size: 25px;
+	letter-spacing: 1.5px;
+}
+
+.fa-gamepad {
+  color: #ffa600;
+  transition: transform .7s ease-in-out;
+}
+
+.fa-gamepad:hover{
+  transform: rotate(360deg);
+}
